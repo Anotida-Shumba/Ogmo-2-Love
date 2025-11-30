@@ -1,5 +1,6 @@
 ---@class Tile
 ---@field position Vec2
+---@field draw fun(self:Tile)
 
 Tile = {}
 Tile.__index = Tile
