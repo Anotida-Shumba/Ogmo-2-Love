@@ -1,0 +1,3 @@
+---@class Vec2
+---@field x number
+---@field y number
