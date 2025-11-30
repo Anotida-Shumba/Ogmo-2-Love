@@ -1,5 +1,5 @@
 {
-  "name": "New Project",
+  "name": "Map",
   "ogmoVersion": "3.4.0",
   "levelPaths": ["."],
   "backgroundColor": "#282c34ff",
@@ -25,23 +25,6 @@
       "exportMode": 1,
       "arrayMode": 1,
       "defaultTileset": "New Tileset"
-    },
-    {
-      "definition": "tile",
-      "name": "breakable",
-      "gridSize": {"x": 32, "y": 32},
-      "exportID": "59306155",
-      "exportMode": 1,
-      "arrayMode": 1,
-      "defaultTileset": "New Tileset"
-    },
-    {
-      "definition": "entity",
-      "name": "safe_points",
-      "gridSize": {"x": 32, "y": 32},
-      "exportID": "68709813",
-      "requiredTags": [],
-      "excludedTags": []
     }
   ],
   "entities": [
