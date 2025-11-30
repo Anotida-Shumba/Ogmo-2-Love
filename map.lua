@@ -5,7 +5,7 @@ Map = {}
 Map.__index = Map
 
 require "tile"
-local json = require "dkjson"
+local json = require "dkjson" --path to dkjson
 
 ---@return Map
 ---@param position Vec2
@@ -23,7 +23,7 @@ function Map.new(map_path, tilemap, tile_size, position)
 	o.tiles = {}
 
 	---@diagnostic disable-next-line: need-check-nil
-	local terrain_layer = decoded_data["layers"][1]["dataCoords2D"]
+	local terrain_layer = decoded_data["layers"][1]["dataCoords2D"] --layer containing tile information
 	for y_cord, row in ipairs(terrain_layer) do
 		for x_cord, tile in ipairs(row) do
 			if tile[1] ~= -1 then
