@@ -12,7 +12,7 @@ local json = require "dkjson"
 ---@param tilemap "love.image"
 ---@param tile_size number
 ---@param map_path string
-function Map.new(target_world, position, tilemap, tile_size, map_path)
+function Map.new(map_path, tilemap, tile_size, position)
 	local o = {}
 	setmetatable(o, Map)
 	o.position = position
@@ -31,7 +31,7 @@ function Map.new(target_world, position, tilemap, tile_size, map_path)
 				local x = (x_cord - 1) * o.tile_size
 				local y = (y_cord - 1) * o.tile_size
 				local position_coord = {x = o.position.x + x, y = o.position.y + y}
-				local new_tile = Tile(position_coord, tile_vec2, o.tile_size, o.tilemap)
+				local new_tile = Tile.new(position_coord, tile_vec2, o.tile_size, o.tilemap)
 				o.target_world:add(new_tile, position_coord.x, position_coord.y, o.tile_size, o.tile_size) 
 				table.insert(o.tiles, new_tile)
 			end
