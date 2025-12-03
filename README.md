@@ -12,10 +12,11 @@ for the library to work your ogmo map should have the following settings:
 ## Usage
 ```lua
 require "map" --first require the map file with your respective location to the file
-local map_position = {x = 0, y = 0}
+local tilemap = love.graphics.newImage("assets/tilemap.png")
+local map_position = {x = 0, y = 0} --this is the structure of all mentioned Vec2
 local map = Map.new("assets/example.json", tilemap, 32, map_position) --create an instance of the Map class and pass in the parameters
 ```
 ##Map Params
 ```lua
-  Map.new(json_map_path, love_image_for_tilemap, tilesize, position)
+  Map.new(json_map_path:string, love_image_for_tilemap:Image, tilesize:number, position:vec2)
 ```
