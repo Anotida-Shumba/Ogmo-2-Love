@@ -5,6 +5,10 @@
 Tile = {}
 Tile.__index = Tile
 
+function Tile:__tostring()
+    return "{" .."x : " .. self.position.x .. ", y : " .. self.position.y .. "}"
+end
+
 ---@return Tile
 ---@param position Vec2
 ---@param tile_coords Vec2
@@ -26,6 +30,8 @@ function Tile:draw()
 end
 
 ---@class Map
+---@field tiles {}
+---@field tile_size number
 ---@field draw fun()
 
 Map = {}

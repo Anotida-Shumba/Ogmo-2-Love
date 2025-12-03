@@ -15,8 +15,29 @@ require "map" --first require the map file with your respective location to the 
 local tilemap = love.graphics.newImage("assets/tilemap.png")
 local map_position = {x = 0, y = 0} --this is the structure of all mentioned Vec2
 local map = Map.new("assets/example.json", tilemap, 32, map_position) --create an instance of the Map class and pass in the parameters
+
+-- new(json_map_path:string, love_image_for_tilemap:Image, tilesize:number, position:vec2)
 ```
-##Map Params
+
+## Drawing
 ```lua
-  Map.new(json_map_path:string, love_image_for_tilemap:Image, tilesize:number, position:vec2)
+function love.draw()
+    map:draw()
+end
 ```
+
+## Refrences
+tiles are stored as instances of a tile class 
+```lua
+  for _, tile in ipairs(map.tiles) do 
+        print(tile)
+  end
+
+  --this will print all the positions of each tile inside the map
+
+  map.tiles[1].position.x = 100
+  --with this line you can manipulate a tile's position
+```
+
+## Tiles
+&nbsp;&nbsp;&nbsp;&nbsp; TIles have a vec2 position variable that can be changes to relocate tiles
