@@ -12,6 +12,7 @@ for the library to work your ogmo map should have the following settings:
 ## Usage
 ```lua
 require "map" --first require the map file with your respective location to the file
+local map_position = {x = 0, y = 0}
 local map = Map.new("assets/example.json", tilemap, 32, map_position) --create an instance of the Map class and pass in the parameters
 ```
 ##Map Params
