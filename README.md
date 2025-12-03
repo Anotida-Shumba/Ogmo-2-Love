@@ -18,6 +18,12 @@ local map = Map.new("assets/example.json", tilemap, 32, map_position) --create a
 
 -- new(json_map_path:string, love_image_for_tilemap:Image, tilesize:number, position:vec2)
 ```
+&nbsp;&nbsp;&nbsp;&nbsp;Make sure that the path to dkjson is correct in the map file
+
+```lua
+local json = require "dkjson"
+```
+
 
 ## Drawing
 ```lua
