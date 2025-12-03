@@ -4,9 +4,9 @@
 -provides functions to draw the map.  
 
 ## Settings
-for the library to work your ogmo map should have the following settings:  
+#### for the library to work your ogmo map should have the following settings:  
 &nbsp;&nbsp;&nbsp;&nbsp;-tile layer should be exported as a 2d array with Coordinates representing the tiles instead of Id's.  
-  <img width="1138" height="52" alt="image" src="https://github.com/user-attachments/assets/5a3992fa-ddb0-40a5-a0f6-f20833aa7162" />  
+  &nbsp;&nbsp;&nbsp;&nbsp;<img width="1138" height="52" alt="image" src="https://github.com/user-attachments/assets/5a3992fa-ddb0-40a5-a0f6-f20833aa7162" />  
   &nbsp;&nbsp;&nbsp;&nbsp;-the tile and map files should be in the same  location
 
 ## Usage
